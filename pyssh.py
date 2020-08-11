@@ -40,7 +40,7 @@ if(__name__ == '__main__'):
 
 	with gui.Copy:
 		ftp_connection()
-		ftp.get(gui.command, getcwd() + '\\teste.txt')
+		ftp.get(gui.command, getcwd() + '\\copy.txt')
 		ftp.close()
 
 	with gui.Run:
