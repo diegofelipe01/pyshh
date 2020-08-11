@@ -1,2 +1,2 @@
 # pyshh
-Connect to a unix-like OS to show and retrive data
+Connect to a unix-like OS using SSH protocol to show and retrive data
