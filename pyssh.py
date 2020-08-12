@@ -5,7 +5,9 @@ import admin
 from guietta import _, Gui, Quit
 from os import getcwd
 
-host = 'HOST_ADDRESS'
+#everything in uppercase is for configuration and therefore should be changed
+
+host = 'HOST_IP'
 port = 22
 username = 'USERNAME'
 password = 'PASSWORD'
@@ -34,8 +36,8 @@ if(__name__ == '__main__'):
 	gui = Gui(
 
 	  [  'Command: ', '__command__'  ,['Run'] ],
-	  [  'Result: '  , 'result' ,  _  ],
-	  [  _               ,    ['Copy']     ,      Quit      ]
+	  [  'Result: '  ,   'result'   ,    _    ],
+	  [    _     ,    ['Copy']     ,   Quit   ]
 	)
 
 	with gui.Copy:
