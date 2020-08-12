@@ -5,8 +5,8 @@ from os import getcwd
 
 #everything in uppercase is for configuration and therefore should be changed
 
-host = 'HOST_IP'
-port = 22
+host = 'HOSTNAME'
+port = HOSTPORT
 username = 'USERNAME'
 password = 'PASSWORD'
 
@@ -24,8 +24,8 @@ def command(command):
 
 
 def sftp_connection():
-	global ftp
-	ftp = ssh.open_sftp()
+	global sftp
+	sftp = ssh.open_sftp()
 
 
 if(__name__ == '__main__'):
@@ -40,8 +40,8 @@ if(__name__ == '__main__'):
 
 	with gui.Copy:
 		sftp_connection()
-		ftp.get(gui.command, getcwd() + '\\copy.txt')
-		ftp.close()
+		sftp.get(gui.command, getcwd() + '\\copy.txt')
+		sftp.close()
 
 	with gui.Run:
 		command(gui.command)
