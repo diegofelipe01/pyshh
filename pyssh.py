@@ -1,6 +1,4 @@
 import paramiko
-import pprint
-import admin
 
 from guietta import _, Gui, Quit
 from os import getcwd
@@ -25,7 +23,7 @@ def command(command):
 	stdin, stdout, stderr = ssh.exec_command(command)
 
 
-def ftp_connection():
+def sftp_connection():
 	global ftp
 	ftp = ssh.open_sftp()
 
@@ -41,7 +39,7 @@ if(__name__ == '__main__'):
 	)
 
 	with gui.Copy:
-		ftp_connection()
+		sftp_connection()
 		ftp.get(gui.command, getcwd() + '\\copy.txt')
 		ftp.close()
 
